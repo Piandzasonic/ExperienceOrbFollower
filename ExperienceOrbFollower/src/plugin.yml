@@ -1,0 +1,6 @@
+name: ExprienceOrbFollower
+main: vexsmp.plugin.Main
+author: Alzen
+version: 1.0
+api-version: 1.16
+description: Plugin that makes experience orbs follow the player.
