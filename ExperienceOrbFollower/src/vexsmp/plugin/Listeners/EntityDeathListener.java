@@ -40,6 +40,10 @@ public class EntityDeathListener implements Listener{
 	}
 	
 	private Vector calculateVelocity(Location from, Location to, double speed) {
-        return to.toVector().subtract(from.toVector()).normalize().multiply(speed);
+		Vector direction = to.toVector().subtract(from.toVector());
+		if(direction.lengthSquared() == 0) {
+			return direction;
+		}
+        return direction.normalize().multiply(speed);
     }
 }
