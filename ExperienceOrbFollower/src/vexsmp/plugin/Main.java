@@ -1,5 +1,6 @@
 package vexsmp.plugin;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,8 +13,12 @@ public class Main extends JavaPlugin{
 	private static Main instance;
 	
 	@Override
-	public void onEnable() {
+	public void onEnable() {		
 		instance = this;
+		
+		int pluginId = 19621;
+		Metrics metrics = new Metrics(instance, pluginId);
+		
 		getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
 		
 		getLogger().info(line);
