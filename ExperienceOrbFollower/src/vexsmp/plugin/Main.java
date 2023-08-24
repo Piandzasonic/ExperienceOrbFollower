@@ -1,10 +1,10 @@
 package vexsmp.plugin;
 
-import org.bstats.bukkit.Metrics;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import vexsmp.plugin.Listeners.EntityDeathListener;
+import vexsmp.plugin.bstats.Metrics;
 
 public class Main extends JavaPlugin{
 	
